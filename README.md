@@ -1,1 +1,3 @@
-# C0119134
+# keepalive-setupnginx
+
+nginx, locust, ファイルのインストールをする
