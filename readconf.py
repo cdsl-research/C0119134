@@ -1,6 +1,5 @@
 import sys
 #filename = "nginxconf.txt"
-
 def readfile(filename):
     with open(filename, "r", encoding="utf-8") as f:
         txt = f.readlines()
@@ -13,6 +12,7 @@ def writefile(filename, txt):
     
 if __name__ == '__main__':
     args = sys.argv
+    print(args)
     filename = args[1]
     timeout = args[2]
     txt = readfile(filename)
@@ -21,6 +21,6 @@ if __name__ == '__main__':
         if x>=0:
             num = i
             break
-    line = " "*x+"keepalive_timeout  "+timeout+";\n"
+    line = "\t"+"keepalive_timeout  "+timeout+";\n"
     txt[num] = line
     writefile(filename, txt)
